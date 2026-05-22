@@ -66,4 +66,218 @@
             content: '';
             position: absolute;
             top: -20px;
-            right: -20px
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .avatar-container {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 15px;
+            background: white;
+            border-radius: 50%;
+            padding: 5px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ไอคอนตัวแทนรูปภาพ ถ้ามีรูปจริงสามารถเปลี่ยนเป็นแท็ก <img> ได้ครับ */
+        .avatar-placeholder {
+            width: 100%;
+            height: 100%;
+            background: var(--light-blue);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            color: var(--primary-blue);
+        }
+
+        .profile-header h1 {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .profile-header .nickname {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 400;
+            backdrop-filter: blur(5px);
+        }
+
+        /* ส่วนเนื้อหา */
+        .profile-body {
+            padding: 40px 30px;
+        }
+
+        .info-title {
+            font-size: 1.2rem;
+            color: var(--dark-blue);
+            margin-bottom: 25px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #eef2f5;
+            padding-bottom: 10px;
+        }
+
+        .info-title i {
+            color: var(--primary-blue);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+            border: 1px solid #f1f2f6;
+            transition: all 0.2s ease;
+        }
+
+        .info-item:hover {
+            border-color: #dff0fa;
+            background: #fafcfe;
+            transform: scale(1.02);
+        }
+
+        .info-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--light-blue);
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .info-details label {
+            display: block;
+            font-size: 0.85rem;
+            color: #8892b0;
+            margin-bottom: 2px;
+            font-weight: 400;
+        }
+
+        .info-details span {
+            font-size: 1.1rem;
+            color: var(--dark-blue);
+            font-weight: 600;
+        }
+
+        /* ตกแต่งแท็กสีพิเศษ */
+        .color-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .color-dot {
+            width: 16px;
+            height: 16px;
+            background-color: #3498db; /* สีฟ้า */
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+            display: inline-block;
+        }
+
+        /* Footer */
+        .profile-footer {
+            text-align: center;
+            padding: 0 30px 30px;
+            color: #a4b0be;
+            font-size: 0.9rem;
+        }
+
+        /* รองรับการแสดงผลบนมือถือ */
+        @media (max-width: 480px) {
+            .profile-body {
+                padding: 30px 20px;
+            }
+            .profile-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="profile-header">
+            <div class="avatar-container">
+                <div class="avatar-placeholder">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                </div>
+            </div>
+            <h1>เด็กชายสิรวิชญ์ ตระกลบุษบง</h1>
+            <span class="nickname"><i class="fa-solid fa-face-smile"></i> น้องพีท</span>
+        </div>
+
+        <div class="profile-body">
+            <h2 class="info-title"><i class="fa-solid fa-address-card"></i> ข้อมูลส่วนตัว (About Me)</h2>
+            
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <div class="info-details">
+                        <label>วันเกิด</label>
+                        <span>8 มีนาคม พ.ศ. 2555</span>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <div class="info-details">
+                        <label>อาหารที่ชอบ</label>
+                        <span>กะเพราไข่ดาว <i class="fa-solid fa-fire" style="color: #ff7675;"></i></span>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <div class="info-details">
+                        <label>สีที่ชอบ</label>
+                        <span class="color-badge"><span class="color-dot"></span> สีฟ้า (Blue)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-footer">
+            <p>Made with <i class="fa-solid fa-heart" style="color: #74b9ff;"></i> My Personal Profile</p>
+        </div>
+    </div>
+
+</body>
+</html>
