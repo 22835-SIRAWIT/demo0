@@ -227,4 +227,144 @@
                 color: #e11d48 !important;
                 border-color: #ffe4e6 !important;
             }
-            .
+            .quote-box {
+                background: #f8f8fa !important;
+                border-left-color: #121212 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        /* Responsive สำหรับการดูบนมือถือ */
+        @media (max-width: 680px) {
+            .card-body {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 30px;
+            }
+            .card-header {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        
+        <div class="header-image-container">
+            <img class="header-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqBZIaniDkLgwf-GEtSzZelEq_DLGUUssMlA&s" alt="รูปภาพหัวการ์ด" width="500" height="300">
+        </div>
+
+        <div class="card-header">
+            <span class="school-badge">ข้อมูลนักเรียน</span>
+            <h1 class="student-name">สิรวิชญ์ ตระกลบุษบง</h1>
+            <p class="student-nickname">ชื่อเล่น: (ไม่ได้ระบุ)</p>
+        </div>
+
+        <div class="card-body">
+            
+            <div class="column">
+                <div class="info-section">
+                    <h2 class="section-title">ข้อมูลทั่วไป</h2>
+                    <div class="info-item">
+                        <div class="info-label">วันเกิด</div>
+                        <div class="info-value">8 มีนาคม 2555</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">เพศ / ราศี</div>
+                        <div class="info-value">ชาย / มีน</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">ส่วนสูง</div>
+                        <div class="info-value">161 ซม.</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">กรุ๊ปเลือด</div>
+                        <div class="info-value">-</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">ภูมิลำเนา</div>
+                        <div class="info-value">เชียงใหม่</div>
+                    </div>
+                </div>
+
+                <div class="info-section" style="margin-top: 25px;">
+                    <h2 class="section-title">การเรียน & กิจกรรม</h2>
+                    <div class="info-item">
+                        <div class="info-label">วิชาที่ชอบ</div>
+                        <div class="pill-container">
+                            <span class="pill dark">คอมพิวเตอร์</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">วิชาที่ยาก</div>
+                        <div class="pill-container">
+                            <span class="pill danger">คณิตศาสตร์</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">ชมรม / กิจกรรม</div>
+                        <div class="pill-container">
+                            <span class="pill">E-sport</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">เพื่อนสนิท</div>
+                        <div class="info-value">พอตเตอร์</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="info-section">
+                    <h2 class="section-title">ไลฟ์สไตล์ & ความชอบ</h2>
+                    <div class="info-item">
+                        <div class="info-label">งานอดิเรก</div>
+                        <div class="info-value">เล่นเกม</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">กีฬา</div>
+                        <div class="info-value">บาสเกตบอล</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">อาหารโปรด</div>
+                        <div class="info-value">กะเพราหมูสับไข่ดาว</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">สีโปรด</div>
+                        <div class="info-value">ดำ</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">เพลงที่ชอบ</div>
+                        <div class="info-value">Pop</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">อนิเมะ / ซีรีส์</div>
+                        <div class="info-value">ชีวิตไม่ต้องเด่นขอเป็นเทพในเงา</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">ทักษะ</div>
+                        <div class="info-value">-</div>
+                    </div>
+                </div>
+
+                <div class="info-section" style="margin-top: 25px;">
+                    <h2 class="section-title">เป้าหมายในอนาคต</h2>
+                    <div class="info-item">
+                        <div class="info-label">ความฝัน / อาชีพ</div>
+                        <div class="info-value" style="font-weight: 700; color: #121212; font-size: 16px;">นักแข่ง E-sport</div>
+                    </div>
+                    
+                    <div class="quote-box">
+                        <div class="quote-title">คติประจำใจ</div>
+                        <div class="quote-text">“ไม่ต้องถามหา ถึงเวลาเดะมาให้เห็น”</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
